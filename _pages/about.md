@@ -1,16 +1,16 @@
 ---
 layout: about
-title: about
+title: home
 permalink: /
-subtitle: Physics & Applied Engineering · Carthage College
+subtitle: B.S. Physics · B.A. Applied Engineering · Minor in Mathematics · Carthage College
 
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Carthage College</p>
-    <p>Kenosha, Wisconsin</p>
+    <p>Kenosha, WI</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,23 +26,54 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<!-- DRAFT bio assembled from your reflections. Rewrite in your own voice; your plan also calls for an adapted elevator pitch here. -->
+## About Me
 
-I'm a senior at Carthage College, double majoring in physics and applied engineering. I'm working toward a PhD in alternative propulsion technologies for spacecraft, researching and developing new methods for electric and plasma-based propulsion.
+placeholder
 
-I want to do this not for the title, but because I enjoy the hard tasks of research: working at a problem that is incredibly difficult, with the freedom to ask questions and learn along the way. My physics training taught me how to understand a problem deeply; my engineering training taught me how to plan, document, and deliver a project from proposal to prototype.
+## Skills Summary
 
-This portfolio collects reflections on the experiences that shaped me as a researcher and professional. You can find them on the [reflections]({{ '/projects/' | relative_url }}) page.
+### Transferable Skills
 
-### Skills
+- **Communication**
+  - Coordinated CRL team and managed project deliverables and deadlines ([WSGC Collegiate Rocket Launch]({{ '/portfolio/rocket-launch/' | relative_url }}))
+- **Presentation Skills**
+  - Prepared and presented formal oral and poster presentations for academic conferences
+  - Prepared lectures to be given in class as part of both ([In-Class Lectures]({{ '/portfolio/in-class-lectures/' | relative_url }}))
+- **Teaching**
+  - Undertaken preceptor role for upper level physics courses teaching peers additional content and tutoring gaps in knowledge from lecture
+- **Independent Learning**
+  - Learned Finite Element and Monte Carlo simulation skills for creating acoustic fluid simulations ([M.U.T.T.]({{ '/portfolio/mutt/' | relative_url }}))
 
-- **Technical documentation**: keeping thorough design and research notes so that work stays accessible to others, a habit built in Carthage's Engineering Practice courses.
-- **Teaching and presenting**: researching, preparing, and delivering lectures on topics outside the classroom curriculum.
-- **Project planning and management**: taking engineering projects from proposal to final prototype as part of a team.
+### Technical Skills
 
-<div class="row justify-content-sm-center">
-  <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/nasa_photo.jpg" title="Braedon Larsen" class="img-fluid rounded z-depth-1" %}
-  </div>
+- **Technical Writing**
+  - Fluent in writing in Latex and Markdown for drafting and preparation of academic writing.
+- **Engineering Design**
+  - Familiar with multiple different CAD software for drafting and design of parts
+  - Knowledge of engineering documentation and report writing ([Engineering Practice I & II]({{ '/portfolio/engineering-practice/' | relative_url }}))
+- **Computer Programming**
+  - Formal coursework lead to projects developing in: Java, C, C#, Swift, Python, and MATLAB
+  - Personal projects in plasma simulations undertaken in python using plasmapy
+  - Software development of experimental control software for suborbital payload written in Python and C ([Carthage Microgravity Lab]({{ '/portfolio/microgravity-lab/' | relative_url }}))
+- **File Organization and Management**
+  - Managed several repos for research projects using Git on Github
+
+### Research & Physics Skills
+
+- **Data Analysis**
+  - Researched, designed, and tested data analysis algorithms for detecting gas colloids in cylindrical tanks using optical cameras ([M.U.T.T.]({{ '/portfolio/mutt/' | relative_url }}))
+- **Experimental Design**
+  - Designed and tested optical rigging system for calculating 3D "refraction field" to measure the change in apparent size of objects from within cylindrical tank. ([Carthage Microgravity Lab]({{ '/portfolio/microgravity-lab/' | relative_url }}))
+- **Literature Research**
+  - Developed research hypotheses and searched to find suitable pieces of literature and extract pertinent information from them on multiple occasions.
+
+## Contact Me
+
+| Email       | Phone       |
+| :---------- | :---------- |
+| placeholder | placeholder |
+
+<div style="max-width: 640px; margin: 2rem auto 0;">
+  {% include figure.liquid loading="lazy" path="assets/img/nasa_photo.jpg" title="Braedon Larsen" class="img-fluid rounded z-depth-1" %}
+  <div class="caption">placeholder</div>
 </div>
-<!-- Add a caption for this photo, e.g. <div class="caption">…</div> -->

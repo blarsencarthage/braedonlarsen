@@ -135,8 +135,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Braedon Larsen # blog_name will be displayed in your blog page
-blog_description: notes on physics and engineering
+blog_name: newsletter
+blog_description: placeholder
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

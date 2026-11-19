@@ -1,65 +1,54 @@
 ---
 layout: page
-title: reflections
-permalink: /projects/
-description: Reflections on the experiences that shaped me as a physicist and engineer.
+title: portfolio
+permalink: /portfolio/
+description: placeholder
 nav: true
 nav_order: 1
-display_categories: [reflections]
-horizontal: false
+dropdown: true
+children:
+  # The Portfolio menu. When you add a project in _projects/, add a line here with its title and permalink.
+  - title: overview
+    permalink: /portfolio/
+  - title: divider
+  - title: M.U.T.T. (2025)
+    permalink: /portfolio/mutt/
+  - title: EP4 Internship (2026)
+    permalink: /portfolio/ep4-internship/
+  - title: Microgravity Lab
+    permalink: /portfolio/microgravity-lab/
+  - title: Engineering Thesis
+    permalink: /portfolio/engineering-thesis/
+  - title: Engineering Practice
+    permalink: /portfolio/engineering-practice/
+  - title: Collegiate Rocket Launch
+    permalink: /portfolio/rocket-launch/
+  - title: Project Hail Mary
+    permalink: /portfolio/project-hail-mary/
+  - title: In-Class Lectures
+    permalink: /portfolio/in-class-lectures/
+  - title: Elevator Pitch
+    permalink: /portfolio/elevator-pitch/
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
-
-{% else %}
-
-<!-- Display projects without categories -->
+<!-- Each entry is generated from a file in _projects/ (ordered by "importance"): title, role, description and img come from that file's front matter. -->
 
 {% assign sorted_projects = site.projects | sort: "importance" %}
+{% for project in sorted_projects %}
+{% assign side = forloop.index | modulo: 2 %}
 
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
+<div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; margin: 2rem 0;{% if side == 0 %} flex-direction: row-reverse;{% endif %}">
+  <div style="flex: 3 1 320px;">
+    <h3 style="margin-bottom: 0.25rem;"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    <p style="margin-bottom: 0.5rem;"><strong>{{ project.role }}</strong></p>
+    <p>{{ project.description }}</p>
+    <p><a href="{{ project.url | relative_url }}">Read more &rarr;</a></p>
   </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
+  {% if project.img %}
+  <div style="flex: 2 1 240px;">
+    <a href="{{ project.url | relative_url }}"><img src="{{ project.img | relative_url }}" alt="{{ project.title }}" class="img-fluid rounded z-depth-1" style="width: 100%;"></a>
   </div>
   {% endif %}
-{% endif %}
 </div>
+{% unless forloop.last %}<hr>{% endunless %}
+{% endfor %}
