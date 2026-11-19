@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://blarsencarthage.github.io/braedonlarsen/sitemap.xml
