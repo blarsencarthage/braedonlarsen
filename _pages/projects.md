@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: reflections
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Reflections on the experiences that shaped me as a physicist and engineer.
 nav: true
-nav_order: 3
-display_categories: [work, fun]
+nav_order: 1
+display_categories: [reflections]
 horizontal: false
 ---
 
